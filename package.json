@@ -1,0 +1,22 @@
+{
+  "name": "plnkr-logger",
+  "version": "1.0.0",
+  "description": "A horrible little thing to override `console.log` and add logger to the window to pretty print to html.",
+  "main": "logger.js",
+  "scripts": {
+    "build": "rm logger.min.js && uglifyjs -ml -o ./logger.min.js ./logger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evilsoft/plnkr-logger.git"
+  },
+  "author": "Ian Hofmann-Hicks (evil)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evilsoft/plnkr-logger/issues"
+  },
+  "homepage": "https://github.com/evilsoft/plnkr-logger#readme",
+  "devDependencies": {
+    "uglifyjs": "^2.4.10"
+  }
+}
