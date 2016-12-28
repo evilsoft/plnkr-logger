@@ -96,6 +96,9 @@
         color: config.colors.boolean
       })
     }
+    else if(typeof value === 'function') {
+      return addStyle(createNode('Function'))
+    }
     else if(isArray(value)) {
       return createNode(buildArray(value))
     }
