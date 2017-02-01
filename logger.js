@@ -1,6 +1,7 @@
 (function(config) {
   const realLog = console.log
   const consoleEl = document.querySelector(config.selector)
+  const globalName = config.globalName || 'logger'
 
   addStyle(consoleEl, {
     background: config.colors.background,
@@ -170,9 +171,10 @@
     realLog.apply(console, arguments)
   }
 
-  config.root.logger = log
+  config.root[globalName]= log
   console.log = log
 }({
+  globalName: 'logger',
   root: window,
   selector: 'body',
   fontSize: '28px',
